@@ -1,0 +1,327 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion> 
+    <groupId>com.xcodekit</groupId>
+    <artifactId>springkit</artifactId>
+    <version>1.2007.2216.0</version><!--  -SNAPSHOT  -->
+    <packaging>jar</packaging>  
+  	<properties> 
+          <github.global.server>github</github.global.server> 
+	 	     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    	 <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	   	   <java.version>1.8</java.version> 
+         <maven.compiler.source>1.8</maven.compiler.source>
+         <maven.compiler.target>1.8</maven.compiler.target> 
+         <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+         <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+  </properties> 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+	 	<version>2.0.3.RELEASE</version>
+		<relativePath/>
+	</parent>
+  <dependencies>  	  
+		<dependency> 
+      <groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		 </dependency>
+		 <!--模版框架  
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		 </dependency>
+		 -->
+<dependency>
+    <groupId>org.thymeleaf</groupId>
+    <artifactId>thymeleaf-spring5</artifactId>
+    <version>3.0.9.RELEASE</version>
+</dependency>
+		  <dependency>
+    <groupId>nz.net.ultraq.thymeleaf</groupId>
+    <artifactId>thymeleaf-layout-dialect</artifactId>
+    <version>2.0.4</version>
+</dependency>
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		 </dependency>
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+         </dependency>
+       <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+<!--测试类
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+</dependency>-->
+    <dependency> 
+	        <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-redis</artifactId> 
+     </dependency>   
+     <dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		<dependency>
+    <groupId>org.dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>2.1.1</version>
+   </dependency>
+    <!--pagehelper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+    <!--Netty -->
+    <dependency>
+       <groupId>io.netty</groupId>
+       <artifactId>netty-all</artifactId>
+       <version>5.0.0.Alpha2</version>
+     </dependency>
+      <!-- https://mvnrepository.com/artifact/com.esotericsoftware.kryo/kryo -->
+      <dependency>
+     <groupId>com.esotericsoftware.kryo</groupId>
+    <artifactId>kryo</artifactId>
+    <version>2.16</version>
+   </dependency>
+   <!--commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.6</version>
+		</dependency>
+ <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec base64-->
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.9</version>
+</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.10</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+   <!--数据库驱动  -->
+  
+		<!--连接池
+		 <dependency>
+    		<groupId>com.alibaba</groupId>
+    		<artifactId>druid-spring-boot-starter</artifactId>
+    		<version>1.1.14</version>
+     </dependency>-->   
+		<!--数据库驱动 END-->
+		 
+ <!-- mybatisplus与springboot整合 
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatisplus-spring-boot-starter</artifactId>
+    <version>1.0.5</version>
+</dependency>-->
+<!-- MP 核心库 
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatis-plus</artifactId>
+    <version>2.1.8</version>
+  </dependency>-->
+<!-- 模板引擎 -->
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-engine-core</artifactId>
+    <version>2.0</version>
+</dependency>
+   <!--Mybatis支持 -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.2</version>
+	 	</dependency>
+		 		<!--JDBC执行query-->
+	  <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>1.6</version>
+    </dependency>
+		<!--shiro 权限管理-->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>1.3.2</version>
+		</dependency>  
+		<dependency>
+		<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>1.3.2</version>
+		 </dependency>
+		 	<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>1.3.2</version>
+		 </dependency>	
+		 <dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>1.3.2</version>
+		 </dependency>
+		<!--shiro 权限管理END-->  
+		 <!--thymeleaf模板引擎和shiro框架的整合 -->
+		<dependency>
+			<groupId>com.github.theborakompanioni</groupId>
+			<artifactId>thymeleaf-extras-shiro</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+	   
+		<!--
+     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+      </dependency>-->
+        <!--任务调度 {??}framework.utils.ScheduleManagerUtil -->
+     	<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>  
+    <groupId>com.alibaba</groupId>  
+    <artifactId>fastjson</artifactId>  
+    <version>1.2.41</version>  
+</dependency>  
+<dependency>
+			 <groupId>org.jsoup</groupId>
+			 <artifactId>jsoup</artifactId>
+	 	 	 <version>1.11.2</version>
+		</dependency>
+  <!--缓存 -->
+  <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>2.10.0</version>
+</dependency>
+	<!-- https://mvnrepository.com/artifact/log4j/log4j 日志必须-->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.11</version>
+</dependency>
+<!-- swagger -->
+<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.0</version>
+ </dependency>  
+<dependency>
+  <groupId>com.fasterxml.jackson.datatype</groupId>
+  <artifactId>jackson-datatype-jsr310</artifactId>
+  <version>2.9.7</version>
+  </dependency>
+	<!-- swagger-ui 
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+ </dependency> 
+ <dependency>
+   <groupId>com.github.xiaoymin</groupId>
+   <artifactId>docTitle</artifactId>
+   <version>1.9.0</version>
+ </dependency>-->
+</dependencies>  
+<!--运行jar包 
+<build>
+        <finalName>springrod-framework</finalName>  
+        <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin> 
+				<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+                <archive>
+                    <manifest> 
+                        <mainClass>com.springrod.design.Boot</mainClass>  
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+ </build>-->   
+<build>
+   <resources> 
+      <resource> 
+      <directory>src/main/resources</directory>    
+      <targetPath>META-INF/resources/</targetPath>  
+      <includes>
+        <include>**/*.js</include>
+        <include>**/*.css</include>
+      </includes>  
+      </resource>  
+   </resources>
+   <plugins>
+     <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <configuration>
+                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+                </configuration>
+    </plugin> 
+    <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version >0.12</version>
+                <configuration>
+                    <message >Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory><!--本地jar地址-->
+                    <branch>refs/heads/release</branch><!--分支的名称-->
+                    <merge>true</merge>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>springkit</repositoryName><!--对应github上创建的仓库名称 name-->
+                    <repositoryOwner>xcodekit</repositoryOwner><!--github 仓库所有者即登录用户名-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+  </plugin>    
+  </plugins>
+ </build> 
+ 
+ <!--
+<distributionManagement> 
+        <repository>
+            <id>maven-releases</id>
+             <name>maven-releases</name>
+             <url>http://wb-main:12187/nexus/repository/maven-releases/</url>
+        </repository> 
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+             <url>http://wb-main:12187/nexus/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    -->
+
+</project>

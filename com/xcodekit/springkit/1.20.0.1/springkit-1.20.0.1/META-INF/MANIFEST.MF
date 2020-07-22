@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: springkit
+Implementation-Version: 1.20.0.1
+Built-By: seerafe
+Implementation-Vendor-Id: com.xcodekit
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/springkit
+

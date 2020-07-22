@@ -1,0 +1,17 @@
+package com.xcodekit.springkit.tasks;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class WebLogTask {
+    
+   
+    /**
+        * 定时任务，每天晚上1点删除数据表t_tempClob中的所有记录
+     */
+    @Scheduled(cron= "0/2 * * * * ? ")
+    public void deleteAllTempClob(){
+           
+    }
+}
